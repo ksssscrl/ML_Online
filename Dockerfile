@@ -1,5 +1,6 @@
 FROM python:3.9-slim-bullseye
 RUN mkdir my-model
+ENV MODEL_DIR=/home/jovyan/my-model
 ENV MODEL_FILE=model.pkl
 
 
