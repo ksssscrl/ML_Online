@@ -1,6 +1,10 @@
 FROM jupyter/scipy-notebook
-RUN mkdir my-model
-ENV MODEL_DIR=/home/yy240/model.pkl
+# RUN mkdir my-model
+ENV MODEL_FILE=model.pkl
 
+
+
+COPY requirements.txt ./requirements.txt
+RUN pip install -r requirements.txt 
 
 COPY app.py ./app.py
