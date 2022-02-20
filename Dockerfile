@@ -1,5 +1,5 @@
-FROM jupyter/scipy-notebook
-# RUN mkdir my-model
+FROM python:3.9-slim-bullseye
+RUN mkdir my-model
 ENV MODEL_FILE=model.pkl
 
 
