@@ -9,4 +9,3 @@ spec:
     - protocol: TCP
       port: 5012
       targetPort: 5012
-  type: LoadBalancer
