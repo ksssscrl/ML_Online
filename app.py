@@ -26,6 +26,6 @@ def hello():
     if request.method == 'POST':
         data = request.get_json(force=True)
         country=model.predict(np.array([data['text']]))
-        return jsonify({'text': data["text"],'country':str(country[0])})
+        return jsonify({'is_american':str(country[0]),'version':'0.7','model_date':'2/23'})
     else:
         return "hello"
