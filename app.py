@@ -25,4 +25,4 @@ def index():
 def hello():
     data = request.get_json(force=True)
     country=model.predict(np.array([data['text']]))
-    return jsonify({'is_american':str(country[0]),'version':'0.96','model_date':'time'})
+    return jsonify({'is_american':str(country[0]),'version':'0.96','model_date':time})
