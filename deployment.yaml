@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: american-predictor
-        image: quay.io/kssscrl/american-predictor:0.91
+        image: quay.io/kssscrl/american-predictor:0.92
         ports:
         - containerPort: 5012
