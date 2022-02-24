@@ -15,7 +15,8 @@ MODEL_PATH =  MODEL_FILE
 
 app = Flask(__name__)
 model = load(MODEL_PATH)
-time= load(MODEL_PATH)
+
+
 @app.route('/')
 def index():
     return 'Index Page'
@@ -25,4 +26,4 @@ def index():
 def hello():
     data = request.get_json(force=True)
     country=model.predict(np.array([data['text']]))
-    return jsonify({'is_american':str(country[0]),'version':'0.97','model_date':time})
+    return jsonify({'is_american':str(country[0]),'version':'0.98','model_date':'2022-02-23 20:48:23'})
