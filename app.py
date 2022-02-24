@@ -20,12 +20,9 @@ model = load(MODEL_PATH)
 def index():
     return 'Index Page'
 
-@app.route('/api/american',methods=["GET","POST"])
+@app.route('/api/american',methods=["POST"])
 
 def hello():
-    if request.method == 'POST':
-        data = request.get_json(force=True)
-        country=model.predict(np.array([data['text']]))
-        return jsonify({'is_american':str(country[0]),'version':'0.93','model_date':'2/23'})
-    else:
-        return "hello"
+    data = request.get_json(force=True)
+    country=model.predict(np.array([data['text']]))
+    return jsonify({'is_american':str(country[0]),'version':'0.94','model_date':'2/23'})
